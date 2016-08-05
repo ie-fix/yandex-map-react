@@ -72,7 +72,10 @@ class YandexMap extends Component {
         } else {
             api.load(this._getAPIParams())
                 .then(this._onAPILoad.bind(this))
-                .catch((error) => console.log('Error occured: %s', error));
+                .catch((error) => {
+                    console.log('Error occured: %s', error)
+                    throw error;
+                });
         }
     }
 

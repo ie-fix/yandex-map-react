@@ -3,5 +3,5 @@
  */
 export const apiConfig = {
     host: 'api-maps.yandex.ru',
-    version: '2.1'
+    version: '2.0'
 };

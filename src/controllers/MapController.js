@@ -7,6 +7,7 @@ class MapController {
 
     createMap (container, state, options) {
         this._map = new (api.getAPI()).Map(container, state, options);
+        this.map = this._map;
         this.events = this._map.events.group();
 
         this._setupCollection();
@@ -16,10 +17,6 @@ class MapController {
 
     appendMarker (marker) {
         this._geoCollection.add(marker.getAPIInstance());
-    }
-
-    get map () {
-        return this._map;
     }
 
     setOptions (name, value) {
